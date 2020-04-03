@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+.app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header .title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header .box-inputs {
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.header .box-inputs input {
+  width: 80%;
+  height: 40px;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px 0 1px solid #fff;
+  box-shadow: 0.5px 0.5px 0.5px #fff;
+}
+
+.header .box-inputs input:focus {
+  outline-color: transparent;
+}
+.header .box-inputs button {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #fff;
+  transition: filter 0.2s;
+}
+.header .box-inputs button:hover {
+  filter: brightness(90%);
+}
+.header .box-inputs button:focus {
+  outline: 0;
+}
+
+.header .box-inputs button svg {
+    width: 50%;
+    height: 50%;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content .item {
+  background: #fff;
+  margin: 16px;
+  width: 300px;
+  height: 400px;
+  max-height: 400px;
+  border-radius: 8px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  color: #000000;
+  text-decoration: none;
+}
+
+.content .item:hover {
+  color: #000000;
+  text-decoration: none;
+}
+
+.content .item .item-title {
+  text-align: center;
+  font-size: 20px;
+  margin: 4px;
+}
+.content .item .item-image{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-top: 8px;;
+}
+.content .item .item-image img {
+  border-radius: 8px;
+  max-width: 220px;
+  width: 220px;
+  max-height: 180px ;
 }
 
-.App-link {
-  color: #61dafb;
+.content .item p {
+  line-height: 24px;
+  margin: 1px 0;
+  text-align: justify;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
